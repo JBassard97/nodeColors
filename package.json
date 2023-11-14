@@ -1,5 +1,5 @@
 {
-  "name": "nodecolors",
+  "name": "JBassard97nodeColors",
   "version": "1.0.0",
   "description": "Easily apply ANSI escape codes to colorize your text, the text's background, or both simultaneously! Example usage in colors.js",
   "main": "colors.js",
