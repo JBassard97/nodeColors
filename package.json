@@ -1,6 +1,6 @@
 {
   "name": "jbassard97nodecolors",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Easily apply ANSI escape codes to colorize your text, the text's background, or both simultaneously!",
   "main": "colors.js",
   "scripts": {
@@ -15,7 +15,10 @@
     "chalk alternative",
     "fun",
     "module",
-    "console logging"
+    "console logging",
+    "ANSI",
+    "Escape Codes",
+    "Intuitive"
   ],
   "author": "Jonathan Bassard (JBassard97)",
   "license": "ISC"
