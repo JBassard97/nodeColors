@@ -8,6 +8,7 @@ const YellowText = (text) => `\x1b[33m${text}\x1b[0m`;
 const BlueText = (text) => `\x1b[34m${text}\x1b[0m`;
 const MagentaText = (text) => `\x1b[35m${text}\x1b[0m`;
 const WhiteText = (text) => `\x1b[37m${text}\x1b[0m`;
+const OrangeText = (text) => `\x1b[38;5;208m${text}\x1b[0m`;
 
 // Bright foreground colors:
 const BrightCyanText = (text) => `\x1b[96m${text}\x1b[0m`;
@@ -18,6 +19,7 @@ const BrightYellowText = (text) => `\x1b[93m${text}\x1b[0m`;
 const BrightBlueText = (text) => `\x1b[94m${text}\x1b[0m`;
 const BrightMagentaText = (text) => `\x1b[95m${text}\x1b[0m`;
 const BrightWhiteText = (text) => `\x1b[97m${text}\x1b[0m`;
+const BrightOrangeText = (text) => `\x1b[1;38;5;214m${text}\x1b[0m`;
 
 // Background (text) colors:
 const CyanBackground = (text) => `\x1b[46m${text}\x1b[0m`;
@@ -28,6 +30,7 @@ const YellowBackground = (text) => `\x1b[43m${text}\x1b[0m`;
 const BlueBackground = (text) => `\x1b[44m${text}\x1b[0m`;
 const MagentaBackground = (text) => `\x1b[45m${text}\x1b[0m`;
 const WhiteBackground = (text) => `\x1b[47m${text}\x1b[0m`;
+const OrangeBackground = (text) => `\x1b[48;5;208m${text}\x1b[0m`;
 
 // Bright background colors:
 const BrightCyanBackground = (text) => `\x1b[106m${text}\x1b[0m`;
@@ -38,6 +41,7 @@ const BrightYellowBackground = (text) => `\x1b[103m${text}\x1b[0m`;
 const BrightBlueBackground = (text) => `\x1b[104m${text}\x1b[0m`;
 const BrightMagentaBackground = (text) => `\x1b[105m${text}\x1b[0m`;
 const BrightWhiteBackground = (text) => `\x1b[107m${text}\x1b[0m`;
+const BrightOrangeBackground = (text) => `\x1b[1;48;5;214m${text}\x1b[0m`;
 
 // ! ------------------------------------------------------------------------------------------------
 
@@ -155,6 +159,7 @@ const colors = {
   BlackText,
   GreenText,
   RedText,
+  OrangeText,
   YellowText,
   BlueText,
   MagentaText,
@@ -163,6 +168,7 @@ const colors = {
   BrightBlackText,
   BrightGreenText,
   BrightRedText,
+  BrightOrangeText,
   BrightYellowText,
   BrightBlueText,
   BrightMagentaText,
@@ -185,6 +191,7 @@ const colors = {
   BlackBackground,
   GreenBackground,
   RedBackground,
+  OrangeBackground,
   YellowBackground,
   BlueBackground,
   MagentaBackground,
@@ -193,6 +200,7 @@ const colors = {
   BrightBlackBackground,
   BrightGreenBackground,
   BrightRedBackground,
+  BrightOrangeBackground,
   BrightYellowBackground,
   BrightBlueBackground,
   BrightMagentaBackground,
@@ -222,13 +230,20 @@ const testPrint = () => {
 
 // ! ------------------------------------------------------------------------------------------------
 
+const { RGBtoANSI, RGBText, RGBBackground } = require("./RGBtoANSI");
+
 const allFunctions = {
   ...colors,
   testPrint,
+  RGBtoANSI,
+  RGBText,
+  RGBBackground,
 };
 
 // console.log(
 // ItalicText(BoldText(DoubleUnderlineText(RainbowText("Taste the Rainbow"))))
 // );
+
+console.log(allFunctions.RGBText("BIG HAIRY AND PINK", 207, 3, 124));
 
 module.exports = allFunctions;
