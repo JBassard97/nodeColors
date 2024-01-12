@@ -44,13 +44,13 @@ const BrightWhiteBackground = (text) => `\x1b[107m${text}\x1b[0m`;
 
 const RainbowText = (text) => {
   const colors = [
-    "\x1b[31m",
-    "\x1b[33m",
-    "\x1b[32m",
-    "\x1b[36m",
-    "\x1b[34m",
-    "\x1b[35m",
-  ]; // Red, Yellow, Green, Cyan, Blue, Magenta
+    "\x1b[31m", // Red
+    "\x1b[33m", // Yellow
+    "\x1b[32m", // Green
+    "\x1b[36m", // Cyan
+    "\x1b[34m", // Blue
+    "\x1b[35m", // Magenta
+  ];
   const reset = "\x1b[0m";
   let rainbowOutput = "";
   for (let i = 0; i < text.length; i++) {
@@ -58,6 +58,51 @@ const RainbowText = (text) => {
     rainbowOutput += color + text[i];
   }
   return rainbowOutput + reset;
+};
+
+const ChristmasText = (text) => {
+  const colors = [
+    "\x1b[31m", // Red
+    "\x1b[37m", // White
+    "\x1b[32m", // Green
+  ];
+  const reset = "\x1b[0m";
+  let christmasOutput = "";
+  for (let i = 0; i < text.length; i++) {
+    const color = colors[i % colors.length];
+    christmasOutput += color + text[i];
+  }
+  return christmasOutput + reset;
+};
+
+const IcyText = (text) => {
+  const colors = [
+    "\x1b[94m", // Bright Blue
+    "\x1b[37m", // White
+    "\x1b[96m", // Bright Cyan
+  ];
+  const reset = "\x1b[0m";
+  let icyOutput = "";
+  for (let i = 0; i < text.length; i++) {
+    const color = colors[i % colors.length];
+    icyOutput += color + text[i];
+  }
+  return icyOutput + reset;
+};
+
+const FieryText = (text) => {
+  const colors = [
+    "\x1b[91m", // Bright Red
+    "\x1b[93m", // Bright Yellow
+    "\x1b[37m", // White
+  ];
+  const reset = "\x1b[0m";
+  let fieryOutput = "";
+  for (let i = 0; i < text.length; i++) {
+    const color = colors[i % colors.length];
+    fieryOutput += color + text[i];
+  }
+  return fieryOutput + reset;
 };
 
 module.exports = {
@@ -78,6 +123,9 @@ module.exports = {
   BrightMagentaText,
   BrightWhiteText,
   RainbowText,
+  ChristmasText,
+  IcyText,
+  FieryText,
   CyanBackground,
   BlackBackground,
   GreenBackground,
