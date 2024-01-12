@@ -105,7 +105,9 @@ const FieryText = (text) => {
   return fieryOutput + reset;
 };
 
-module.exports = {
+const { testPrint } = require("./testPrint");
+
+const colors = {
   CyanText,
   BlackText,
   GreenText,
@@ -143,3 +145,10 @@ module.exports = {
   BrightMagentaBackground,
   BrightWhiteBackground,
 };
+
+const allFunctions = {
+  ...colors,
+  testPrint,
+};
+
+module.exports = allFunctions;

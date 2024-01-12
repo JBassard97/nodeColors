@@ -1,5 +1,3 @@
-const colors = require("./colors");
-
 const testPrint = () => {
   const colorFunctions = {};
 
@@ -20,7 +18,5 @@ const testPrint = () => {
     console.log(coloredText);
   }
 };
-
-testPrint();
 
 module.exports = { testPrint };
