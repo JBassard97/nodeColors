@@ -1,7 +1,4 @@
-// TODO: EASILY CONSOLE.LOG COLORS
-// In destination .js file, simply >>> const colors = require("./colors.js");
-// Then >>> console.log(RainbowText("Hello, World!"));
-
+// TODO: EASILY CONSOLE.LOG COLORS, PATTERNS, YOU NAME IT
 // Foreground (text) colors:
 const CyanText = (text) => `\x1b[36m${text}\x1b[0m`;
 const BlackText = (text) => `\x1b[30m${text}\x1b[0m`;
@@ -41,6 +38,8 @@ const BrightYellowBackground = (text) => `\x1b[103m${text}\x1b[0m`;
 const BrightBlueBackground = (text) => `\x1b[104m${text}\x1b[0m`;
 const BrightMagentaBackground = (text) => `\x1b[105m${text}\x1b[0m`;
 const BrightWhiteBackground = (text) => `\x1b[107m${text}\x1b[0m`;
+
+// ! ------------------------------------------------------------------------------------------------
 
 const RainbowText = (text) => {
   const colors = [
@@ -105,6 +104,52 @@ const FieryText = (text) => {
   return fieryOutput + reset;
 };
 
+const ZebraText = (text) => {
+  let result = "";
+
+  for (let i = 0; i < text.length; i++) {
+    // Alternate between black and white background
+    const backgroundColor = i % 2 === 0 ? "\x1b[40m" : "\x1b[47m";
+
+    // Set text color to black or white
+    const textColor = i % 2 === 0 ? "\x1b[37m" : "\x1b[30m";
+
+    // Add ANSI escape codes for background and text color
+    result += `${backgroundColor}${textColor}${text[i]}`;
+  }
+
+  // Reset colors at the end
+  result += "\x1b[0m";
+
+  return result;
+};
+
+// ! ------------------------------------------------------------------------------------------------
+
+const ItalicText = (text) => `\x1b[3m${text}\x1b[0m`;
+const BoldText = (text) => `\x1b[1m${text}\x1b[0m`;
+const UnderlineText = (text) => `\x1b[4m${text}\x1b[0m`;
+const OverlineText = (text) => `\x1b[53m${text}\x1b[0m`;
+const DoubleUnderlineText = (text) => `\x1b[21m${text}\x1b[0m`;
+// ? These do not work, at least not in my environment
+// const DottedUnderlineText = (text) => `\x1b[4:3m${text}\x1b[0m`;
+// const CurlyUnderlineText = (text) => `\x1b[4:4m${text}\x1b[0m`;
+// const FramedText = (text) => `\x1b[51m${text}\x1b[0m`;
+// const EncircledText = (text) => `\x1b[52m${text}\x1b[0m`;
+
+const InverseColors = (text) => `\x1b[7m${text}\x1b[0m`;
+const FaintText = (text) => `\x1b[2m${text}\x1b[0m`;
+
+// ? Blink is outdated, poses accessibility concerns, and doesn't work in general. I'm still keeping it here commented out.
+// const Blink = (text) => `\x1b[5m${text}\x1b[0m`;
+// const SlowBlinkText = (text) => `\x1b[6m${text}\x1b[0m`;
+// const FastBlinkText = (text) => `\x1b[25m${text}\x1b[0m`;
+
+const Hidden = (text) => `\x1b[8m${text}\x1b[0m`;
+const CrossedOut = (text) => `\x1b[9m${text}\x1b[0m`;
+
+// ! ------------------------------------------------------------------------------------------------
+
 const colors = {
   CyanText,
   BlackText,
@@ -126,6 +171,16 @@ const colors = {
   ChristmasText,
   IcyText,
   FieryText,
+  ZebraText,
+  UnderlineText,
+  DoubleUnderlineText,
+  ItalicText,
+  BoldText,
+  OverlineText,
+  InverseColors,
+  FaintText,
+  Hidden,
+  CrossedOut,
   CyanBackground,
   BlackBackground,
   GreenBackground,
@@ -165,9 +220,15 @@ const testPrint = () => {
   }
 };
 
+// ! ------------------------------------------------------------------------------------------------
+
 const allFunctions = {
   ...colors,
   testPrint,
 };
+
+// console.log(
+// ItalicText(BoldText(DoubleUnderlineText(RainbowText("Taste the Rainbow"))))
+// );
 
 module.exports = allFunctions;
