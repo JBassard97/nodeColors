@@ -239,7 +239,4 @@ const allFunctions = {
   ...CSStoANSIfuncs,
 };
 
-testPrint();
-allFunctions.CSSkeywordsTestPrint();
-
 module.exports = allFunctions;
