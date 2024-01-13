@@ -209,7 +209,6 @@ const colors = {
 
 const testPrint = () => {
   const colorFunctions = {};
-
   // Iterate over the functions in the module
   for (const functionName in colors) {
     const functionValue = colors[functionName];
@@ -230,20 +229,17 @@ const testPrint = () => {
 
 // ! ------------------------------------------------------------------------------------------------
 
-const { RGBtoANSI, RGBText, RGBBackground } = require("./RGBtoANSI");
+const RGBtoANSIfuncs = require("./RGBtoANSI");
+const CSStoANSIfuncs = require("./CSStoANSI");
 
 const allFunctions = {
   ...colors,
   testPrint,
-  RGBtoANSI,
-  RGBText,
-  RGBBackground,
+  ...RGBtoANSIfuncs,
+  ...CSStoANSIfuncs,
 };
 
-// console.log(
-// ItalicText(BoldText(DoubleUnderlineText(RainbowText("Taste the Rainbow"))))
-// );
-
-console.log(allFunctions.RGBText("BIG HAIRY AND PINK", 207, 3, 124));
+testPrint();
+allFunctions.CSSkeywordsTestPrint();
 
 module.exports = allFunctions;

@@ -12,4 +12,6 @@ const RGBText = (text, r, g, b) =>
 const RGBBackground = (text, r, g, b) =>
   `\x1b[48;5;${RGBtoANSI(r, g, b)}m${text}\x1b[0m`;
 
-module.exports = { RGBtoANSI, RGBText, RGBBackground };
+const RGBtoANSIfuncs = { RGBtoANSI, RGBText, RGBBackground };
+
+module.exports = RGBtoANSIfuncs;
