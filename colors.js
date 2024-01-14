@@ -21,7 +21,7 @@ const BrightMagentaText = (text) => `\x1b[95m${text}\x1b[0m`;
 const BrightWhiteText = (text) => `\x1b[97m${text}\x1b[0m`;
 const BrightOrangeText = (text) => `\x1b[1;38;5;214m${text}\x1b[0m`;
 
-// Background (text) colors:
+// Background colors:
 const CyanBackground = (text) => `\x1b[46m${text}\x1b[0m`;
 const BlackBackground = (text) => `\x1b[40m${text}\x1b[0m`;
 const GreenBackground = (text) => `\x1b[42m${text}\x1b[0m`;
