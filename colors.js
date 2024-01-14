@@ -231,12 +231,14 @@ const testPrint = () => {
 
 const RGBtoANSIfuncs = require("./RGBtoANSI");
 const CSStoANSIfuncs = require("./CSStoANSI");
+const HEXtoANSIfuncs = require("./HEXtoANSI");
 
 const allFunctions = {
   ...colors,
   testPrint,
   ...RGBtoANSIfuncs,
   ...CSStoANSIfuncs,
+  ...HEXtoANSIfuncs,
 };
 
 module.exports = allFunctions;
