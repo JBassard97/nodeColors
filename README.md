@@ -2,14 +2,13 @@
 
 ## Table of Contents
 
-- [Title](#title)
+- [Title](#jbassard97nodecolors)
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributors](#contributors)
 - [Questions](#questions)
-- [Screenshots](#screenshots)
 
 ## Description
 
@@ -57,29 +56,59 @@ In any ANSI-compatible terminal, the standard output colors are represented as 8
     // Bright background colors:
     const BrightCyanBackground = (text) => `\x1b[106m${text}\x1b[0m`;
 
+
+    // Example use:
+    console.log(CyanText("Ahh cyan, such a classic output color."));
+
+<img width="140" alt="Screenshot 2024-01-13 234131" src="https://github.com/JBassard97/nodeColors/assets/142551579/1e3e205b-aefc-4534-a60e-471661bc031d">
+
+<img width="140" alt="Screenshot 2024-01-13 234153" src="https://github.com/JBassard97/nodeColors/assets/142551579/e9e5a724-567e-4b69-ba47-ce245200b2e9">
+
 ## Patterns
 
 These functions take in a string of text, loops through it, and applies a colored pattern to its output. These include: RainbowText(), ZebraText(), FieryText(), IcyText(), and for that time of the year - ChristmasText().
+
+<img width="140" alt="Screenshot 2024-01-13 234222" src="https://github.com/JBassard97/nodeColors/assets/142551579/65419870-4c16-4512-a597-ff51562ce600">
 
 ## Styles
 
 These 9 functions take in a string of text, and returns the text with the ANSI codes on either side to define a style. These styles are standard for CLI and include: ItalicText(), BoldText(), UnderlineText(), DoubleUnderlineText,(), OverlineText(), InverseColors(), FaintText(), Hidden(), and CrossedOut().
 
+<img width="140" alt="Screenshot 2024-01-13 234246" src="https://github.com/JBassard97/nodeColors/assets/142551579/b98f85f6-16fb-4f74-beaa-6ccd9b9312c0">
+
 ## CSS
 
 These functions are the stars of the show in my opinion. These 2 functions each take in a string of text, and a string containing a valid CSS color keyword (like "AliceBlue", is case insensitive!), and output your text in the color you requested. If you tried to use a nonexistent color or spelled it wrong, it'll notify you of the mismatch and return the original text. These functions are simply named: CSSkeywordText() and CSSkeywordBackground().
 
+    // Example use:
+    console.log(CSSkeywordText("this text is slateblue", "slateblue"));
+
+<img width="350" alt="Screenshot 2024-01-14 000147" src="https://github.com/JBassard97/nodeColors/assets/142551579/e464fefe-9f60-4fd7-9629-1266cd28fc5a">
+
 ## RGB
 
-These 3 functions can colorize text by the given RGB values. They take in a string of text, and 3 integers (R, G, B).
+These 3 functions can colorize text by the given RGB values. They take in a string of text, and 3 integers (R, G, B). The only 2 you'll need to use are named RGBText() and RGBBackground().
+
+    // Example use:
+    // console.log(RGBText("This text is aqua", 0, 255, 255));
 
 ## HEX
 
 These 2 functions can colorize text by the given HEX color code. These codes can be either 4 or 7 characters long, and should start with '#' These functions are simply named: HexColorText() and HexColorBackground().
 
+    // Example use:
+    // console.log(HexColorText("Colored like a tomato", "#FF6347");
+
 ## TestPrint
 
 Included are 2 functions that can be used to visualize all hues and intensities possible. Calling the function 'testPrint();' by itself will console.log a sample of all of the functions regarding basic colors, patterns, and styles. Calling the function 'CSSkeywordTestPrint();' by itself will console.log every CSS color keyword, demonstrating its ability to show in the foreground and background of the output. This test print is particularly beautiful.
+
+
+<img width="300" alt="Screenshot 2024-01-13 234421" src="https://github.com/JBassard97/nodeColors/assets/142551579/9a9a047d-672c-4bdb-a354-f53f5f49609d">
+
+<img width="300" alt="Screenshot 2024-01-13 234459" src="https://github.com/JBassard97/nodeColors/assets/142551579/c5a2438d-0ab8-44b3-8b83-93e8c594dcd1">
+
+<img width="300" alt="Screenshot 2024-01-13 234521" src="https://github.com/JBassard97/nodeColors/assets/142551579/36c3dcce-af0f-492f-8f60-027c757c8723">
 
 ## License
 
@@ -87,9 +116,12 @@ ISC
 
 ## Contributors
 
+- [jbassard97](https://github.com/JBassard97)
+
 ## Questions
 
 - With the ability to infinitely alter the hues of the output in our terminals, can this create intricate terminal art?
 - Someone PLEASE try making pixel art on my behalf. It'd make me cry with joy.
 
-## Screenshots
+
+
