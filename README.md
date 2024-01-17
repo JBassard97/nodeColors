@@ -6,9 +6,11 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Examples](#examples)
 - [License](#license)
 - [Contributors](#contributors)
 - [Questions](#questions)
+
 
 ## Description
 
@@ -109,6 +111,10 @@ Included are 2 functions that can be used to visualize all hues and intensities 
 <img width="300" alt="Screenshot 2024-01-13 234459" src="https://github.com/JBassard97/nodeColors/assets/142551579/c5a2438d-0ab8-44b3-8b83-93e8c594dcd1">
 
 <img width="300" alt="Screenshot 2024-01-13 234521" src="https://github.com/JBassard97/nodeColors/assets/142551579/36c3dcce-af0f-492f-8f60-027c757c8723">
+
+## Examples
+
+<img width="600" alt="Screenshot 2024-01-17 123100" src="https://github.com/JBassard97/nodeColors/assets/142551579/fd25d0f0-9fe3-425e-806f-fc48579d4e0b">
 
 ## License
 
